@@ -1,3 +1,197 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap');
+
+/* Use it */
 body {
-    background: rgb(89, 255, 0);
+  font-family: "Battambang", sans-serif;
+    background-image: url(images/fronk.png);
+ 
 }
+
+/* nav link states */
+a {
+  display: inline-block;
+  
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  background-color: #413c58;
+}
+
+/* First */
+a:link, 
+a:visited {
+  
+  background: gray;
+  border-radius: 4px;
+  color: white;
+  
+  min-width: 5rem;
+  margin: .5em;
+  padding: .25rem;
+  
+  text-align: center;
+}
+
+/* Last Frame */
+a:hover, 
+a:active {
+  background: white;
+  border: 1px solid black;
+  color: gray;
+  
+  transform: scale(1.5);
+  
+  transition: 
+    background .5s, 
+    transform .5s 1s;
+}
+
+/* Layouts */
+main { 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Primary */
+
+/* Secondary */
+main aside { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ARTICLE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+article{
+  display: flex;
+  flex-direction: column;
+}
+
+article h1 {
+  font-weight: 900;
+  font-size: 3rem;
+
+  display: inline-flex;
+  padding:.25em;
+  
+  background-color: #413c58;
+  color:#EB9C0A;
+  /* hide image   */
+  opacity: 0;
+  
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+article p{
+
+  font-size: 1.5em;
+
+  padding:1em;
+  background-color: #413c58;
+  color: #EB9C0A;
+  text-align: left;
+
+} 
+
+article img {
+  max-height: 25%;
+  max-width: 25%;
+  border-radius: 2em;
+  filter: blur(2px);
+ 
+  transition: filter .5s;
+  
+  /* hide image   */
+  opacity: 0;
+  
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+article img:hover {
+  filter: blur(0);
+}
+
+
+/* ASIDE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+aside ul{
+  padding:2em;
+  background-color: #413c58;
+  color: #EB9C0A;
+  text-align: left;
+  width: 75%;
+  height: 50%;
+}
+
+aside h2{
+  padding:1em;
+  background-color: #413c58;
+  color: #EB9C0A;
+  text-align: left;
+  width:75%;
+}
+
+aside p {
+  font-weight: 200;
+  font-size: 1.25rem;
+
+  background-color: #413c58;
+
+}
+
+
+/* Keyframe Animation~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@keyframes fadeIn {
+   
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
+
+
+
+/* Media Queries */
+@media screen and ( max-width: 1000px ) {
+  
+  main { 
+     grid-template-columns: repeat(1, 1fr);
+  }
+  
+  main img {
+    display: block;
+    
+    height: auto;
+    width: auto;
+  }
+  
+  main h1 {
+    text-align: center;
+    font-size: 1.5rem;
+
+    background-color: #413c58d1;
+  }
+ 
+  aside{
+    display: block;
+  }
+
+  aside nav {
+    flex-direction: column;
+  }
+
+  
+} 

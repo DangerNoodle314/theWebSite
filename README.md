@@ -11,3 +11,10 @@ Starter (boilerplate) for all future projects.
 * Don't start with nothing
 * Common boilerplate for web projects
 * I am a human being who makes mistakes
+
+
+## CITATIONS
+*[Maincoth](https://github.com/ewuweblab/web-starter)
+*[Google](google.fonts)
+*[favicon](https://favicon.io/favicon-converter/)
+*[plyr](https://github.com/sampotts/plyr)
